@@ -59,7 +59,7 @@ while strt:
     play_again = input("Do you want to play again? (y/n): ").lower()
     if play_again != 'y':
         strt = False
-        print("Thank you for playing! Goodbye!\n")
+        print("Thank you for playing! Sayounara!\n")
     else:
         print("\nStarting a new game...\n")
 
