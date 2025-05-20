@@ -35,6 +35,6 @@ for i in range(chances):
         print(f"Congratulations! You guessed the number in {i+1} attempts\n")
         break
     elif guess < number:
-        print(f"Incorrect! The number is greater than {guess}\n")
+        print(f"Incorrect! The number is greater than {guess} ({chances-i-1} attempts left)\n")
     else :
-        print(f"Incorrect! The number is less than {guess}\n")
+        print(f"Incorrect! The number is less than {guess} ({chances-i-1} attempts left)\n")
