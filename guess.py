@@ -1,6 +1,8 @@
 print("\nWelcome to the Number Guessing Game!")
 print("I'm thinking of a number between 1 and 100.\n")
 
+import time
+
 strt = True
 
 while strt:
@@ -32,13 +34,18 @@ while strt:
             print("Invalid input, defaulting to easy level.\n")
             chances = 10
 
+    start_time = time.time()
+
     for i in range(chances+1):
         if i == chances:
             print(f"Sorry! You've used all your chances. The number was {number}.\n")
             break
         guess = int(input(f"Enter your guess : "))
         if guess == number:
-            print(f"Congratulations! You guessed the number in {i+1} attempts\n")
+            end_time = time.time()
+            elapsed_time = end_time - start_time
+            print(f"Congratulations! You guessed the number in {i+1} attempts.")
+            print(f"Time taken: {elapsed_time:.2f} seconds\n")
             break
         elif guess < number:
             print(f"Incorrect! The number is greater than {guess} ({chances-i-1} attempts left)\n")
@@ -48,7 +55,7 @@ while strt:
     play_again = input("Do you want to play again? (y/n): ").lower()
     if play_again != 'y':
         strt = False
-        print("Thank you for playing! Goodbye!")
+        print("Thank you for playing! Goodbye!\n")
     else:
         print("\nStarting a new game...\n")
 
