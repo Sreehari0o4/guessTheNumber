@@ -29,7 +29,10 @@ match diff:
         print("Invalid input, defaulting to easy level.\n")
         chances = 10
 
-for i in range(chances):
+for i in range(chances+1):
+    if i == chances:
+        print(f"Sorry! You've used all your chances. The number was {number}.\n")
+        break
     guess = int(input(f"Enter your guess : "))
     if guess == number:
         print(f"Congratulations! You guessed the number in {i+1} attempts\n")
@@ -38,3 +41,4 @@ for i in range(chances):
         print(f"Incorrect! The number is greater than {guess} ({chances-i-1} attempts left)\n")
     else :
         print(f"Incorrect! The number is less than {guess} ({chances-i-1} attempts left)\n")
+
