@@ -39,6 +39,11 @@ Feel free to modify the code to:
 
 This project is open source and free to use.
 
+## Project URL
+
+You can find more details or inspiration for this project here:  
+[roadmap.sh/number-guessing-game](https://roadmap.sh/projects/number-guessing-game)
+
 ---
 
 Happy guessing! 🎲
