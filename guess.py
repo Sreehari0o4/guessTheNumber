@@ -8,6 +8,7 @@ strt = True
 while strt:
     import random 
     number = random.randint(1,100)
+    print(number)
 
     level_text = '''Please select the difficulty level:
     1. Easy (10 chances)
@@ -38,14 +39,18 @@ while strt:
 
     for i in range(chances+1):
         if i == chances:
-            print(f"Sorry! You've used all your chances. The number was {number}.\n")
+            print(f"Sorry! You've used all your chances you dumbass. The number was {number}.\n")
             break
         guess = int(input(f"Enter your guess : "))
         if guess == number:
             end_time = time.time()
             elapsed_time = end_time - start_time
-            print(f"Congratulations! You guessed the number in {i+1} attempts.")
-            print(f"Time taken: {elapsed_time:.2f} seconds\n")
+            if i==0:
+                print("Damn dude, you got it right. You are a damn good guesser.")
+                print(f"Time taken: {elapsed_time:.2f} seconds\n")
+            else:
+                print(f"Congratulations! You got it in {i+1} attempts.")
+                print(f"Time taken: {elapsed_time:.2f} seconds\n")
             break
         elif guess < number:
             print(f"Incorrect! The number is greater than {guess} ({chances-i-1} attempts left)\n")
