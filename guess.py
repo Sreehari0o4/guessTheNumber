@@ -8,7 +8,6 @@ strt = True
 while strt:
     import random 
     number = random.randint(1,100)
-    print(number)
 
     level_text = '''Please select the difficulty level:
     1. Easy (10 chances)
