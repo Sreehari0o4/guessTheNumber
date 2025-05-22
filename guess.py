@@ -41,6 +41,11 @@ while strt:
             print(f"Sorry! You've used all your chances you dumbass. The number was {number}.\n")
             break
         guess = int(input(f"Enter your guess : "))
+
+        if abs(guess - number) <= 5 and guess != number:
+            print("You're very close!\n")
+
+
         if guess == number:
             end_time = time.time()
             elapsed_time = end_time - start_time
